@@ -2,7 +2,21 @@
  * Start Bootstrap - Stylish Portfolio v5.0.8 (https://startbootstrap.com/themes/stylish-portfolio)
  * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
+ 
+ bin/magento setup:install --base-url=http://127.0.0.1/magento2.lan/ \
+--db-host=localhost --db-name=magento --db-user=magento --db-password=Password1990! \
+--language=fr_FR --currency=EUR --use-rewrites=1
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+
+
+CREATE USER 'magento'@'localhost' IDENTIFIED BY 'Password1990!';
+ GRANT ALL PRIVILEGES ON magento.* TO 'magento'@'localhost';
  */
+
+
+
+
 
 body,
 html {
@@ -78,7 +92,7 @@ h6 {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-callout.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/remi-deias-bg-callout.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
